@@ -14,4 +14,12 @@ class ActorsController < ApplicationController
     
     render({ :template => "actor_templates/show.html.erb" })
   end
+
+  def characters
+    has_many(:characters, {
+      :class_name => "Character",
+      :foreign_key => "actor_id"
+    })
+  end
 end
+
