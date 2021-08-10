@@ -13,12 +13,5 @@ class MoviesController < ApplicationController
     @the_movie = matching_movies.at(0)
 
     render({ :template => "movie_templates/show.html.erb" })
-  end 
-
-  def director
-    belongs_to(:director, {
-      :class_name => "Director"
-    })
-    end
-
+  end
 end

@@ -36,10 +36,4 @@ class DirectorsController < ApplicationController
 
     render({ :template => "director_templates/eldest" })
   end
-
-  def filmography
-    has_many(:filmography, {
-      :class_name => "Movie"
-    })
-  end
 end
